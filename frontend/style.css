@@ -4,3 +4,10 @@
   align-items: center;
   min-height: 100vh;
 }
+
+button {
+  margin: .25em;
+  padding: 1.5em;
+  line-height: 1;
+  height: auto;
+}

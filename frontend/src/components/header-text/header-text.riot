@@ -1,0 +1,17 @@
+<header-text>
+  <h2>Tic Tac Toe</h2>
+  <span if={ state.currentStatus == 0 }>Next move: { state.currentTurn == 1 ? "❌" : "⭕" }</span>
+  <span if={ state.currentStatus == 1 }>Game over: ❌ won!</span>
+  <span if={ state.currentStatus == 2 }>Game over: ⭕ won!</span>
+  <span if={ state.currentStatus == 3 }>Game over: It's a draw!</span>
+  <br>
+  <script>
+    export default {
+      onMounted() {
+        this.appState.header = this;
+        this.hub.invoke("ResetBoard");
+        this.hub.invoke("GetCurrentTurn");
+      }
+    }
+  </script>
+</header-text>

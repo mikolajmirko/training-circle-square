@@ -1,0 +1,10 @@
+<new-game-button>
+  <button class="button button-outline" onclick="{ () => startNewGame() }">New game</button>
+  <script>
+    export default {
+      startNewGame() {
+        this.hub.invoke("ResetBoard");
+      }
+    }
+  </script>
+</new-game-button>
